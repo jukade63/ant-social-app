@@ -7,7 +7,6 @@ import {
     useForm
 } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import { AiFillGithub } from "react-icons/ai";
 import { useRouter } from "next/navigation";
 
 
@@ -92,13 +91,6 @@ const LoginModal = () => {
                 label="Continue with Google"
                 icon={FcGoogle}
                 onClick={() => signIn('google')}
-                secondary
-            />
-            <Button
-                outline
-                label="Continue with Github"
-                icon={AiFillGithub}
-                onClick={() => signIn('github')}
                 secondary
             />
             <div
