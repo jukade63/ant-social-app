@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import serverAuth from "@/libs/getCurrentUser";
+import getCurrentUser from "@/libs/getCurrentUser";
 import prisma from "@/libs/prismadb"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(405).end()
     }
     try {
-        const { currentUser } = await serverAuth(req, res)
+        const { currentUser } = await getCurrentUser(req, res)
         const { body } = req.body
         const { postId } = req.query
         if (!postId || typeof postId !== 'string') {
