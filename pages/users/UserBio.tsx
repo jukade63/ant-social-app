@@ -20,9 +20,6 @@ const UserBio = ({ userId }: UserBioProps) => {
 
     const { isFollowing, toggleFollow } = useFollow(userId);
 
-    console.log('fetched user', fetchedUser);
-
-
     const createdAt = useMemo(() => {
         if (!fetchedUser?.createdAt) {
             return null;
@@ -52,7 +49,7 @@ const UserBio = ({ userId }: UserBioProps) => {
                         {fetchedUser?.name}
                     </p>
                     <p className="text-md text-neutral-500">
-                        @{fetchedUser?.username ? fetchedUser.username : fetchedUser.name}
+                        @{fetchedUser?.username ? fetchedUser?.username : fetchedUser?.name}
                     </p>
                 </div>
                 <div className="flex flex-col mt-4">
