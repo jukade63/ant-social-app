@@ -109,7 +109,7 @@ const LoginModal = () => {
                 font-light
             "
             >
-                <p>Don't have any account?
+                <p>Do not have any account?
                     <span
                         onClick={onToggle}
                         className="
