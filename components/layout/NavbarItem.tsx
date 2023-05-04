@@ -24,6 +24,9 @@ function NavbarItem({ label, href, icon: Icon, onClick, auth, alert }: NavbarIte
             return onClick()
         }
         if (auth && !currentUser) {
+            console.log('auth', auth);
+            console.log('current user', currentUser);
+
             loginModal.onOpen()
         } else if (href) {
             router.push(href)
